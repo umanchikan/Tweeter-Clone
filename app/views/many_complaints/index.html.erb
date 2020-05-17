@@ -1,0 +1,21 @@
+
+<h1>Blogs一覧</h1>
+<%= notice %>　
+<table>
+  <tr>
+    <th>内容</th>
+  </tr>
+  　
+
+  <% @manycomplaints.each do |manycomplaint| %>
+    <tr>
+      <td><%= manycomplaint.content %></td>
+      <td><%= link_to '詳細を確認する', many_complaint_path(manycomplaint.id) %></td>
+      <td><%= link_to 'ブログを編集する', edit_many_complaint_path(manycomplaint.id), data: { confirm: '本当に編集していいですか？' } %></td>
+      <td><%= link_to 'ブログを削除する', many_complaint_path(manycomplaint.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'ブログ新規作成', '/many_complaints/new' %>
+

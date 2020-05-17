@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  resources :manycomplaints
+
+  resources :many_complaints do
+    collection do
+      post :confirm
+    end
+  end
 end
+

@@ -10,10 +10,14 @@ class ManyComplaintsController < ApplicationController
 
   def create
     @manycomplaint = ManyComplaint.new(manycomplaint_params)
-    if @manycomplaint.save
-      redirect_to many_complaints_path, notice: "新規投稿作成"
-    else
+    if params[:back]
       render :new
+    else
+      if @manycomplaint.save
+        redirect_to many_complaints_path, notice: "新規投稿作成"
+      else
+        render :new
+      end
     end
   end
 

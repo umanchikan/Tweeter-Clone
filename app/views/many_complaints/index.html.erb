@@ -1,5 +1,5 @@
 
-<h1>Blogs一覧</h1>
+<h1>投稿一覧</h1>
 <%= notice %>　
 <table>
   <tr>
@@ -10,7 +10,7 @@
   <% @manycomplaints.each do |manycomplaint| %>
     <tr>
       <td><%= manycomplaint.content %></td>
-      <td><%= link_to '詳細を確認する', many_complaint_path(manycomplaint.id) %></td>
+
       <td><%= link_to 'ブログを編集する', edit_many_complaint_path(manycomplaint.id), data: { confirm: '本当に編集していいですか？' } %></td>
       <td><%= link_to 'ブログを削除する', many_complaint_path(manycomplaint.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
     </tr>

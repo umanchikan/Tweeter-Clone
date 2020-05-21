@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    color: #2d3133;
+    background-color: #3ecdc6;
+    margin: 0;
+    min-height: 1vh;
+}
+
+header {
+    height: 60px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0px;
+}
+
+.header-logo {
+    float: left;
+    padding-left: 20px;
+    font-size: 22px;
+    line-height: 64px;
+}
+
+/*ここから追加*/
+.header-logo a{
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.header-menus {
+    float: right;
+    padding-right: 20px;
+    list-style-type: none;
+}
+
+.header-menus li {
+    float: left;
+    line-height: 64px;
+    font-size: 13px;
+    color: white;
+    padding-left: 15px;
+}
+
+.header-menus a {
+    float: left;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    clear: both;
+}
+
+.footer-logo {
+    height: 60px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.footer-logo li {
+    list-style-type: none;
+    text-align: center;
+    color: white;
+}
+

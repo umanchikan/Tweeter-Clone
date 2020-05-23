@@ -11,11 +11,11 @@
     <tr>
       <td><%= manycomplaint.content %></td>
 
-      <td><%= link_to 'ブログを編集する', edit_many_complaint_path(manycomplaint.id), data: { confirm: '本当に編集していいですか？' } %></td>
-      <td><%= link_to 'ブログを削除する', many_complaint_path(manycomplaint.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+      <td><%= button_to '編集する', edit_many_complaint_path(manycomplaint.id), method: :get, data: { confirm: '本当に編集していいですか？' } %></td>
+      <td><%= button_to '削除する', many_complaint_path(manycomplaint.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
     </tr>
   <% end %>
 </table>
 
-<%= link_to 'ブログ新規作成', '/many_complaints/new' %>
+
 
